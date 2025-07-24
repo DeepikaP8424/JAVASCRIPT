@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of three numbers</title>
+    <style>
+        body
+        {
+            padding-left: 20px;
+            gap:20;
+            text-align: left;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greatest of Three Numbers</h1>
+    a:<input type="text" id="frstnum" placeholder="Enter a num for a"/><br><br>
+    b:<input type="text" id="scndnum" placeholder="Enter a num for b"/><br><br>
+    c:<input type="text" id="thrdnum" placeholder="Enter a num for c"/><br><br>
+    <button onclick="greatest()">Check</button>
+    <p id="result"></p>
+    <script>
+        function greatest()
+        {
+           let a=document.getElementById("frstnum").value;
+           let b=document.getElementById("scndnum").value;
+           let c=document.getElementById("thrdnum").value;
+            if(a>b&&a>c)
+        {
+            document.getElementById("result").textContent="a is greater";
+        }
+        else if(b>c&&b>a)
+        {
+            document.getElementById("result").textContent="b is greater";
+        }
+        else
+        {
+            document.getElementById("result").textContent="c is greater";
+        }
+            
+        }
+    </script>
+
+</body>
+</html>
